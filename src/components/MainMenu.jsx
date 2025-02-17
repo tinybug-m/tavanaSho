@@ -19,10 +19,16 @@ const MainMenu = () => {
                 <summary>دوره ها</summary>
                 <ul className="bg-base-100 rounded-t-none p-2">
                   <li>
-                    <a>دوره 1</a>
+                    <a>خودشناسی</a>
                   </li>
                   <li>
-                    <a>دوره 2</a>
+                    <a>هوش هیچانی در روابط</a>
+                  </li>
+                  <li>
+                    <a>هوش اجتماعی در مجیط کار</a>
+                  </li>
+                  <li>
+                    <a>روابط عاشقانه</a>
                   </li>
                 </ul>
               </details>
@@ -32,10 +38,16 @@ const MainMenu = () => {
                 <summary>مقالات آموزشی</summary>
                 <ul className="bg-base-100 rounded-t-none p-2">
                   <li>
-                    <a>مقاله 1</a>
+                    <a>خودشناسی</a>
                   </li>
                   <li>
-                    <a>مقاله 2</a>
+                    <a>هوش هیجانی</a>
+                  </li>
+                  <li>
+                    <a>هوش اجتماعی</a>
+                  </li>
+                  <li>
+                    <a>روابط عاشقانه</a>
                   </li>
                 </ul>
               </details>
@@ -45,10 +57,13 @@ const MainMenu = () => {
                 <summary>آزمون ها</summary>
                 <ul className="bg-base-100 rounded-t-none p-2">
                   <li>
-                    <a>آزمون 1</a>
+                    <a>scl 90</a>
                   </li>
                   <li>
-                    <a>آزمون 2</a>
+                    <a>آزمون mmpi</a>
+                  </li>
+                  <li>
+                    <a>آزمون mbti</a>
                   </li>
                 </ul>
               </details>

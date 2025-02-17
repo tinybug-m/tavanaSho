@@ -61,7 +61,7 @@ const MainCarousel = ({
         modules={[navigateType == "buttons" ? Navigation : Pagination]}
         style={{
           paddingBottom: navigateType !== "buttons" ? "40px" : "0",
-          padding: "20px 0",
+          padding: "50px 0",
         }}
         slidesPerView={slidesPerView} // Adjust this for mobile
         spaceBetween={20}

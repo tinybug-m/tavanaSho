@@ -137,6 +137,33 @@ const BestCoursesData = [
     teacher: "مهرشاد رضایی",
     lastStudent: "مهرشاد رضایی",
   },
+  {
+    id: 1,
+    title: "رویکرد شناختی رفتاری در اتاق درمان",
+    img: "./images/TopCourses/TopCourse0.png",
+    date: "۱۴۰۳/۰۷/۱۷",
+    enrolled: 154,
+    teacher: "مهرشاد رضایی",
+    lastStudent: "مهرشاد رضایی",
+  },
+  {
+    id: 2,
+    title: "برنامه ریزی در پیشبرد اهداف",
+    img: "./images/TopCourses/TopCourse1.png",
+    date: "۱۴۰۳/۰۷/۱۷",
+    enrolled: 144,
+    teacher: "رضا ارش نیا",
+    lastStudent: "محسن آرش نیا",
+  },
+  {
+    id: 3,
+    title: "آموزش کوچینگ و توسعه فردی",
+    img: "./images/TopCourses/TopCourse2.png",
+    date: "۱۴۰۳/۰۷/۱۷",
+    enrolled: 154,
+    teacher: "مهرشاد رضایی",
+    lastStudent: "مهرشاد رضایی",
+  }
 ];
 const BlogPostsData = [
   {
