@@ -25,12 +25,12 @@ const MainCarousel = ({
   const swiperRef = useRef(null);
 
   return (
-    <div className="mb-16 ">
+    <div className="">
       <div className="flex justify-between mb-8">
-        <div className="flex flex-col relative">
+        <div className="flex flex-col relative gap-2">
           <img
             src={ElementSVG}
-            className="absolute -top-5 -right-5 -z-10"
+            className="absolute -top-3 -right-5 -z-10"
             alt="backdrop"
           />
           <h2 className="font-bold text-4xl">{title}</h2>
@@ -59,7 +59,10 @@ const MainCarousel = ({
       {/* Swiper Carousel */}
       <Swiper
         modules={[navigateType == "buttons" ? Navigation : Pagination]}
-        style={{ paddingBottom: navigateType !== "buttons" ? "40px" : "0" }}
+        style={{
+          paddingBottom: navigateType !== "buttons" ? "40px" : "0",
+          padding: "20px 0",
+        }}
         slidesPerView={slidesPerView} // Adjust this for mobile
         spaceBetween={20}
         loop={true}

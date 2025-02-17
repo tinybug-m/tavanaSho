@@ -50,7 +50,7 @@ const Customers = () => {
     console.log(customers);
   };
   return (
-    <div className=" flex justify-between mb-16">
+    <div className=" flex justify-between">
       <div className="w-5/12 flex">
         {/*  */}
         <div className="stack stack-start">

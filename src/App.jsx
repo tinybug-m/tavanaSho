@@ -200,9 +200,11 @@ const BlogPostsData = [
 function App() {
   return (
     <>
-      <div className="max-w-screen-xl mx-auto bg-#fafafa">
+      <div className="max-w-screen-xl mx-auto bg-#fafafa flex flex-col gap-32 pb-24 pt-40">
         <MainMenu />
+
         <MainHero />
+
         <MainCarousel
           data={CoursesData}
           title="جدیدترین دوره ها"
@@ -212,7 +214,9 @@ function App() {
         >
           <CourseCard />
         </MainCarousel>
+
         <GrowthPath />
+
         <MainCarousel
           data={BestCoursesData}
           title="محبوب ترین دوره ها"
@@ -222,7 +226,9 @@ function App() {
         >
           <TopCoursesCard />
         </MainCarousel>
+
         <Customers />
+
         <MainCarousel
           data={BlogPostsData}
           title="جدیدترین دوره ها"
@@ -231,6 +237,7 @@ function App() {
         >
           <BlogCard />
         </MainCarousel>
+
         <AboutUs />
       </div>
       <Footer />

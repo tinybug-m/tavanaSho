@@ -11,7 +11,7 @@ import Artboard2 from '../assets/Logos/Artboard2.svg'
 
 const AboutUs = () => {
   return (
-    <div className=" flex justify-between mb-16">
+    <div className=" flex justify-between">
       <div className="w-6/12 flex flex-col">
         <h1 className="text-primary text-4xl font-bold mb-4">دربــــاره ما</h1>
         <p className="text-gray-600 text-xl">

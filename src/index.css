@@ -84,7 +84,7 @@ body {
 
 .btn {
     outline: 0 !important;
-    @apply !shadow-none active:translate-0.5
+    @apply !shadow-none transition-transform active:translate-0 active:scale-105
 }
 
 label {
@@ -101,9 +101,65 @@ label {
     background-origin: border-box;
     background-clip: content-box, border-box;
 }
-.swiper-pagination-bullet{
+
+.swiper-pagination-bullet {
     @apply transition-transform
 }
+
 .swiper-pagination-bullet-active {
     @apply !bg-primary scale-150
+}
+
+/* 
+.moz::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 32px;
+    padding: 2px;
+    background: linear-gradient(35deg, #5F5753, #ffffff, #ffffff);
+    -webkit-mask:
+        linear-gradient(white 0 0) content-box,
+        linear-gradient(white 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: -1;
+} */
+
+
+.moz i {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    border-radius: 30px;
+    padding: 2px;
+    /* the thickness of the border */
+    /* the below will do the magic */
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        /* this will cover only the content area (no padding) */
+        linear-gradient(#fff 0 0);
+    /* this will cover all the area */
+    -webkit-mask-composite: xor;
+    /* needed for old browsers until the below is more supported */
+    mask-composite: exclude;
+    /* this will exclude the first layer from the second so only the padding area will be kept visible */
+}
+
+.moz i::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 400px;
+    height: 400px;
+    /* background: linear-gradient(white 50%, #5F5753 0); */
+    background: linear-gradient(white 40%, #A8A19D 60%, #3e3b39 100%);
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: transform .7s linear;
+}
+
+.moz:hover i::before {
+    transform: translate(-50%, -50%) rotate(315deg);
 }

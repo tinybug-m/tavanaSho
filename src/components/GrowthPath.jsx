@@ -10,8 +10,8 @@ import ElementSVG from "../assets/icons/element.svg";
 import RoadMap from "../assets/roadmap.png";
 const GrowthPath = () => {
   return (
-    <div className="lg:px-16 flex mb-16">
-      <div className="w-6/12 flex flex-col relative justify-between">
+    <div className="lg:px-16 flex">
+      <div className="w-6/12 flex flex-col relative">
         <div>
           <img
             src={ElementSVG}
