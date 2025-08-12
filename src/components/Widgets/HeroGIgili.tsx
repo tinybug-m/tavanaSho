@@ -10,7 +10,7 @@ const HeroGIgili = ({ top = 2, right = 1 }) => {
       <i></i>
       <div className="stat-figure text-secondary">
         <div className="avatar online">
-          <div className="w-16 rounded-full bg-[#FEFEFE40] p-3">
+          <div className="!flex items-center w-16 rounded-full bg-[#FEFEFE40] p-3">
             <EducationIcon />
           </div>
         </div>

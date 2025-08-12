@@ -1,11 +1,6 @@
-/**
- *
- * Icons
- */
-
 import Card from "./Card";
-import Enrolled from "../../assets/icons/Enrolled.svg";
-import Left from "../../assets/icons/Left2.svg";
+import { EnrolledIcon, Left2Icon } from "../../assets/icons";
+import React from "react";
 
 const BlogCard = ({ data }) => {
   return (
@@ -19,7 +14,7 @@ const BlogCard = ({ data }) => {
 
       <div className="flex justify-between">
         <span className="flex items-center gap-1 text-sm text-gray-600">
-          <img src={Enrolled} className="w-5 h-5" alt="Enrolled Icon" />
+          <EnrolledIcon />
           {data.teacher}
         </span>
         <p>{data.date}</p>
@@ -27,7 +22,7 @@ const BlogCard = ({ data }) => {
       <div className="divider !m-0" />
       <div className="flex justify-center gap-1.5">
         مطالعه مقاله
-        <img src={Left} alt="Left2 Icon" />
+        <Left2Icon />
       </div>
     </Card>
   );

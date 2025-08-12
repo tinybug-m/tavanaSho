@@ -1,13 +1,7 @@
-/**
- *
- * Icons
- */
-import Star from "../../assets/icons/Star.svg";
-import Enrolled from "../../assets/icons/Enrolled.svg";
-import User from "../../assets/icons/User.svg";
-import Hexo from "../../assets/icons/Hexo.svg";
+import React from "react";
+
+import { StarIcon, EnrolledIcon, UserIcon, HexoIcon } from "../../assets/icons";
 import Card from "./Card";
-import IconTextCard from "../Widgets/IconTextCard";
 
 const CourseCard = ({ data }) => {
   return (
@@ -16,7 +10,7 @@ const CourseCard = ({ data }) => {
       {data.discount && (
         <div className="w-11 h-11 absolute left-10 top-40 flex justify-center items-center text-xs font-bold">
           <span className="absolute">{data.discount}%</span>
-          <img src={Hexo} alt="Hexo Icon" />
+          <HexoIcon />
         </div>
       )}
 
@@ -26,16 +20,12 @@ const CourseCard = ({ data }) => {
 
         <div className="flex justify-between">
           <span className="flex items-center gap-1 text-sm text-gray-600">
-            <img src={Enrolled} className="w-5 h-5" alt="Enrolled Icon" />
+            <EnrolledIcon className="w-5 h-5" />
             {data.teacher}
           </span>
           <div className="flex items-center gap-1 text-primary">
             <p>{data.rate}</p>
-            <img
-              src={Star}
-              className="flex items-center gap-1 w-4 h-4 ml-3"
-              alt="Start Icon"
-            />
+            <StarIcon className="ml-3" />
           </div>
         </div>
 
@@ -43,7 +33,7 @@ const CourseCard = ({ data }) => {
 
         <div className="flex justify-between items-end">
           <span className="flex items-center gap-1">
-            <img src={User} className="w-5 h-5" alt="User Icon" />
+            <UserIcon className="w-5 h-5" />
             {data.enrolled}
           </span>
           <div>

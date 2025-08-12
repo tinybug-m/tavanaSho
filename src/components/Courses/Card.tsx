@@ -1,6 +1,14 @@
 import React from "react";
+import { ReactElement } from "react";
 
-const Card = ({ rounded, bgColor, shadow, children }) => {
+type CardProps = {
+  rounded?: boolean;
+  bgColor?: string;
+  shadow?: boolean;
+  children: ReactElement[];
+};
+
+const Card = ({ rounded, bgColor, shadow, children }: CardProps) => {
   return (
     <div
       className={`flex overflow-hidden flex-col gap-4 ${
