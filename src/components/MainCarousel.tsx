@@ -1,4 +1,7 @@
+import React from "react";
+
 import { Swiper, SwiperSlide } from "swiper/react";
+import type SwiperType from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -7,32 +10,23 @@ import { Navigation } from "swiper/modules";
 import { Children, cloneElement, useRef } from "react";
 import { Pagination } from "swiper/modules";
 
-/**
- * Icons
- */
-import Left from "../assets/icons/Left.svg";
-import Right from "../assets/icons/Right.svg";
-import ElementSVG from "../assets/icons/element.svg";
+import { LeftIcon, RightIcon, ElementIcon } from "../assets/icons";
 
 const MainCarousel = ({
-  data,
+  cardsData,
   title,
   desc,
   navigateType,
   slidesPerView,
   children,
 }) => {
-  const swiperRef = useRef(null);
+  const swiperRef = useRef<SwiperType | null>(null);
 
   return (
     <div className="">
       <div className="flex justify-between mb-8">
         <div className="flex flex-col relative gap-2">
-          <img
-            src={ElementSVG}
-            className="absolute -top-3 -right-5 -z-10"
-            alt="backdrop"
-          />
+          <ElementIcon className="absolute -top-3 -right-5 -z-10" />
           <h2 className="font-bold text-4xl">{title}</h2>
           <h4 className="font-light text-2xl text-gray-600">{desc}</h4>
         </div>
@@ -44,13 +38,13 @@ const MainCarousel = ({
               className="btn rounded-full w-14 h-14 bg-gray-950 !p-1"
               onClick={() => swiperRef.current?.slidePrev()} // Move to previous slide
             >
-              <img src={Right} alt="Right Icon" />
+              <RightIcon />
             </button>
             <button
               className="btn rounded-full w-14 h-14 bg-transparent border-2 border-gray-950 p-1"
               onClick={() => swiperRef.current?.slideNext()} // Move to next slide
             >
-              <img src={Left} alt="Left Icon" />
+              <LeftIcon />
             </button>
           </div>
         )}
@@ -63,15 +57,15 @@ const MainCarousel = ({
           paddingBottom: navigateType !== "buttons" ? "40px" : "0",
           padding: "50px 0",
         }}
-        slidesPerView={slidesPerView} // Adjust this for mobile
+        slidesPerView={slidesPerView}
         spaceBetween={20}
         loop={true}
-        onSwiper={(swiper) => (swiperRef.current = swiper)} // Store swiper instance in ref
+        onSwiper={(swiper) => (swiperRef.current = swiper)}
         pagination={{
           clickable: true,
         }}
       >
-        {data.map((card) => (
+        {cardsData.map((card) => (
           <SwiperSlide key={card.id}>
             {Children.map(children, (child) =>
               cloneElement(child, { data: card })

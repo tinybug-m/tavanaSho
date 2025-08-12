@@ -163,7 +163,7 @@ const BestCoursesData = [
     enrolled: 154,
     teacher: "مهرشاد رضایی",
     lastStudent: "مهرشاد رضایی",
-  }
+  },
 ];
 const BlogPostsData = [
   {
@@ -233,7 +233,7 @@ function App() {
         <MainHero />
 
         <MainCarousel
-          data={CoursesData}
+          cardsData={CoursesData}
           title="جدیدترین دوره ها"
           desc="سکوی پرتاپ شما به سمت موفقیت"
           navigateType="buttons"
@@ -245,7 +245,7 @@ function App() {
         <GrowthPath />
 
         <MainCarousel
-          data={BestCoursesData}
+          cardsData={BestCoursesData}
           title="محبوب ترین دوره ها"
           desc="یادگیری و رشد توسعه فردی"
           navigateType="buttons"
@@ -257,7 +257,7 @@ function App() {
         <Customers />
 
         <MainCarousel
-          data={BlogPostsData}
+          cardsData={BlogPostsData}
           title="جدیدترین دوره ها"
           desc="سکوی پرتاپ شما به سمت موفقیت"
           slidesPerView={4}
