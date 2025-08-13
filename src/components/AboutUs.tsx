@@ -1,13 +1,9 @@
 import React from "react";
 
-/**
- * 
- * Images
- */
-import Artboard0 from '../assets/Logos/Artboard0.svg'
-import Artboard1 from '../assets/Logos/Artboard1.svg'
-import Artboard2 from '../assets/Logos/Artboard2.svg'
-
+// import Artboard0 from "../assets/Logos/Artboard0.svg";
+// import Artboard1 from "../assets/Logos/Artboard1.svg";
+// import Artboard2 from "../assets/Logos/Artboard2.svg";
+import { Artboard0, Artboard1, Artboard2 } from "../assets/Logos";
 
 const AboutUs = () => {
   return (
@@ -23,9 +19,15 @@ const AboutUs = () => {
         </p>
       </div>
       <div className="w-6/12 flex  relative gap-6 items-end justify-end">
-        <img className="p-4 w-24 h-24 rounded-full bg-secondary hover:bg-primary cursor-pointer" src={Artboard0} alt="Artboard 1"/>
-        <img className="p-4 w-24 h-24 rounded-full bg-secondary hover:bg-primary cursor-pointer" src={Artboard1} alt="Artboard 2"/>
-        <img className="p-4 w-24 h-24 rounded-full bg-secondary hover:bg-primary cursor-pointer" src={Artboard2} alt="Artboard 3"/>
+        <div className="flex items-center p-4 w-24 h-24 rounded-full bg-secondary hover:bg-primary cursor-pointer">
+          <Artboard0 />
+        </div>
+        <div className="flex items-center p-4 w-24 h-24 rounded-full bg-secondary hover:bg-primary cursor-pointer">
+          <Artboard1 />
+        </div>
+        <div className="flex items-center p-4 w-24 h-24 rounded-full bg-secondary hover:bg-primary cursor-pointer">
+          <Artboard2 />
+        </div>
       </div>
     </div>
   );
