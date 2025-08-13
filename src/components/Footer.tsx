@@ -1,35 +1,25 @@
 import React from "react";
 
-/**
- * Icons
- */
-import Telegram from "../assets/icons/Social/Telegram.svg";
-import Instagram from "../assets/icons/Social/Instagram.svg";
-import Twitter from "../assets/icons/Social/Twitter.svg";
-
-import logo from "../assets/logoFooter.png";
-
-
-/**
- * Data
- */
-const pages = [
-  "ارتباط با ما",
-  "تماس با ما",
-  "مقالات",
-  "خدمات تواناشو",
-  "دوره ها",
-];
+import {
+  InstagramIcon,
+  TelegramIcon,
+  TwitterIcon,
+} from "../assets/icons/Social";
+import { APP_PAGES } from "../utils/mockDatas";
 
 const Footer = () => {
   return (
     <div className="bg-[#FFEFEB] ">
       <div className="max-w-screen-xl flex flex-col m-auto gap-8  pt-14 pb-9 relative">
-      <img alt="Tavanasho logo" src={logo} className="absolute -top-10 -right-2" />
+        <img
+          alt="Tavanasho logo"
+          src="images/logoFooter.png"
+          className="absolute -top-10 -right-2"
+        />
 
         <div className="flex gap-16 justify-center">
-          {pages.map((page) => (
-            <a href="#" className="text-xl">
+          {APP_PAGES.map((page, index) => (
+            <a href="#" key={index} className="text-xl">
               {page}
             </a>
           ))}
@@ -42,13 +32,13 @@ const Footer = () => {
           </p>
           <div className="flex gap-5">
             <div className="bg-secondary cursor-pointer hover:bg-primary p-5 rounded-full">
-              <img className="w-6 h-6" src={Telegram} alt="Telegram icon" />
+              <TelegramIcon />
             </div>
             <div className="bg-secondary cursor-pointer hover:bg-primary p-5 rounded-full">
-              <img className="w-6 h-6" src={Instagram} alt="Instagram icon" />
+              <InstagramIcon />
             </div>
             <div className="bg-secondary cursor-pointer hover:bg-primary p-5 rounded-full">
-              <img className="w-6 h-6" src={Twitter} alt="Twitter icon" />
+              <TwitterIcon />
             </div>
           </div>
         </div>

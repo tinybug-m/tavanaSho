@@ -260,3 +260,11 @@ export const CUSTOMERS_MOCK_DATA = [
     score: 4,
   },
 ];
+
+export const APP_PAGES = [
+  "ارتباط با ما",
+  "تماس با ما",
+  "مقالات",
+  "خدمات تواناشو",
+  "دوره ها",
+];
