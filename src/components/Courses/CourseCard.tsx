@@ -20,7 +20,6 @@ const CourseCard = ({ props }: { props: CoursesCardDataProps }) => {
   return (
     <Card bgColor="#F9F9F9" rounded shadow>
       <img src={img} className="rounded-lg  w-full h-44" />
-      {discount && <h1>alo</h1>}
       <div className="w-11 h-11 absolute left-10 top-40 flex justify-center items-center text-xs font-bold">
         <span className="absolute">{discount}%</span>
         <HexoIcon />
@@ -37,7 +36,7 @@ const CourseCard = ({ props }: { props: CoursesCardDataProps }) => {
           </span>
           <div className="flex items-center gap-1 text-primary">
             <p>{rate}</p>
-            <StarIcon className="ml-3" />
+            <StarIcon className="ml-3 w-4" />
           </div>
         </div>
 
