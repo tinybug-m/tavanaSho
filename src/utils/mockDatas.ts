@@ -268,3 +268,29 @@ export const APP_PAGES = [
   "خدمات تواناشو",
   "دوره ها",
 ];
+
+export type MenuItemsProps = {
+  title: string;
+  sub?: string[];
+};
+
+export const MENU_ITEMS: MenuItemsProps[] = [
+  {
+    title: "دوره ها",
+    sub: [
+      "خودشناسی",
+      "هوش هیچانی در روابط",
+      "هوش اجتماعی در مجیط کار",
+      "روابط عاشقانه",
+    ],
+  },
+  {
+    title: "مقالات آموزشی",
+    sub: ["خودشناسی", "هوش هیجانی", "هوش اجتماعی", "روابط عاشقانه"],
+  },
+  {
+    title: "آزمون ها",
+    sub: ["scl 90", "آزمون mmpi", "آزمون mbti"],
+  },
+  { title: "درباره ما" },
+];
