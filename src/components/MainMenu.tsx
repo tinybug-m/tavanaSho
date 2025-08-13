@@ -1,6 +1,5 @@
 import React from "react";
-import logo from "../assets/logo.png";
-import ProfileIcon from "../assets/icons/Profile.svg";
+import { ProfileIcon } from "../assets/icons";
 
 const MainMenu = () => {
   return (
@@ -8,7 +7,7 @@ const MainMenu = () => {
       <div className="max-w-screen-xl mx-auto navbar px-16 py-6">
         <div className="">
           <a className="">
-            <img alt="Tavanasho logo" src={logo} />
+            <img alt="Tavanasho logo" src="images/logo.png" />
           </a>
         </div>
 
@@ -75,7 +74,7 @@ const MainMenu = () => {
         </div>
 
         <div className="flex gap-4 ltr">
-          <label className="input rounded-full bg-gray-100 border-0 !outline-0 !shadow-none px-4 h-12 min-w-64" >
+          <label className="input rounded-full bg-gray-100 border-0 !outline-0 !shadow-none px-4 h-12 min-w-64">
             <input
               type="search"
               required
@@ -101,7 +100,7 @@ const MainMenu = () => {
           </label>
 
           <div className="w-12 h-12 min-w-12 flex justify-center items-center rounded-full bg-gray-950">
-            <img alt="Tailwind CSS Navbar component" src={ProfileIcon} className="w-6 h-6" />
+            <ProfileIcon />
           </div>
         </div>
       </div>
