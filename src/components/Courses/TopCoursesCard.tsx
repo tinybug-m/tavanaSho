@@ -5,7 +5,7 @@ import IconTextCard from "../Widgets/IconTextCard";
 import { BestCoursesDataProps } from "../../utils/mockDatas";
 
 const TopCoursesCard = ({ props }: { props: BestCoursesDataProps }) => {
-  const { img, title, date, enrolled } = props;
+  const { img, title, date, enrolled, teacher, lastStudent } = props;
 
   return (
     <Card>
@@ -27,9 +27,9 @@ const TopCoursesCard = ({ props }: { props: BestCoursesDataProps }) => {
         <div className="flex flex-row justify-center p-3">
           <IconTextCard icon="Users.svg" text={`${enrolled} دانشجو`} />
           <div className="divider divider-horizontal !p-0"></div>
-          <IconTextCard icon="Profile.svg" text={`${enrolled} دانشجو`} />
+          <IconTextCard icon="Profile.svg" text={teacher} />
           <div className="divider divider-horizontal !p-0"></div>
-          <IconTextCard icon="Time.svg" text={`${enrolled} دانشجو`} />
+          <IconTextCard icon="Time.svg" text={lastStudent} />
         </div>
       </div>
     </Card>
