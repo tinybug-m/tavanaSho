@@ -1,11 +1,11 @@
 import React from "react";
-import { ReactElement } from "react";
+import { ReactNode } from "react";
 
 type CardProps = {
   rounded?: boolean;
   bgColor?: string;
   shadow?: boolean;
-  children: ReactElement[];
+  children: ReactNode;
 };
 
 const Card = ({ rounded, bgColor, shadow, children }: CardProps) => {

@@ -65,11 +65,9 @@ const MainCarousel = ({
           clickable: true,
         }}
       >
-        {cardsData.map((card) => (
-          <SwiperSlide key={card.id}>
-            {Children.map(children, (child) =>
-              cloneElement(child, { data: card })
-            )}
+        {cardsData.map((props) => (
+          <SwiperSlide key={props.id}>
+            {Children.map(children, (child) => cloneElement(child, { props }))}
           </SwiperSlide>
         ))}
       </Swiper>

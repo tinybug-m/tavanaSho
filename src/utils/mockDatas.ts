@@ -1,10 +1,37 @@
-export const CoursesData = [
+type defaultCardType = {
+  id: number;
+  title: string;
+  img: string;
+  desc: string;
+};
+
+export type CoursesCardDataProps = defaultCardType & {
+  teacher: string;
+  discount?: number;
+  rate: number;
+  enrolled: number;
+  price: number;
+  discountedPrice: number;
+};
+
+export type BestCoursesDataProps = defaultCardType & {
+  date: string;
+  enrolled: number;
+  teacher: string;
+  lastStudent: string;
+};
+
+export type BlogCardDataProps = defaultCardType & {
+  teacher: string;
+  date: string;
+};
+
+export const CoursesData: CoursesCardDataProps[] = [
   {
     id: 1,
     title: "فن بیان در محیط کار",
     img: "./images/Courses/4.png",
-    description:
-      "در این دوره مهارت‌های لازم برای رسیدن به توافقات موفق و حرفه‌ای را کسب کنید.",
+    desc: "در این دوره مهارت‌های لازم برای رسیدن به توافقات موفق و حرفه‌ای را کسب کنید.",
     teacher: "زهرا موحدی",
     discount: 50,
     rate: 5.0,
@@ -16,8 +43,7 @@ export const CoursesData = [
     id: 2,
     title: "۲۰ فنون مشاوره",
     img: "./images/Courses/4.png",
-    description:
-      "در مورد مشاورانی که به مراجعان خود راه حل هایی ارائه می دهند، مسائل و مشکلات بسیاری وجود دارد.",
+    desc: "در مورد مشاورانی که به مراجعان خود راه حل هایی ارائه می دهند، مسائل و مشکلات بسیاری وجود دارد.",
     teacher: "ابراهیم ثانی",
     discount: 50,
     rate: 5.0,
@@ -29,8 +55,7 @@ export const CoursesData = [
     id: 3,
     title: "تاثیر موسیقی روی مغز",
     img: "./images/Courses/4.png",
-    description:
-      "پدیده ای به نام هرس سیناپس وجود دارد که با افزایش سن رخ می دهد. سیناپس ها ارتباط بین نورون های مغز شما هستند.",
+    desc: "پدیده ای به نام هرس سیناپس وجود دارد که با افزایش سن رخ می دهد. سیناپس ها ارتباط بین نورون های مغز شما هستند.",
     teacher: "آرش رضایی",
     discount: 50,
     rate: 5.0,
@@ -42,8 +67,7 @@ export const CoursesData = [
     id: 4,
     title: "۱۲ فنون مذاکره در محیط کار",
     img: "./images/Courses/4.png",
-    description:
-      "در این دوره مهارت‌های لازم برای رسیدن به توافقات موفق و حرفه‌ای را کسب کنید.",
+    desc: "در این دوره مهارت‌های لازم برای رسیدن به توافقات موفق و حرفه‌ای را کسب کنید.",
     teacher: "مهرشاد حسینی",
     discount: 50,
     rate: 5.0,
@@ -55,8 +79,7 @@ export const CoursesData = [
     id: 5,
     title: "۱۲ فنون مذاکره در محیط کار",
     img: "./images/Courses/4.png",
-    description:
-      "در این دوره مهارت‌های لازم برای رسیدن به توافقات موفق و حرفه‌ای را کسب کنید.",
+    desc: "در این دوره مهارت‌های لازم برای رسیدن به توافقات موفق و حرفه‌ای را کسب کنید.",
     teacher: "مهرشاد حسینی",
     discount: 50,
     rate: 5.0,
@@ -68,8 +91,7 @@ export const CoursesData = [
     id: 6,
     title: "۱۲ فنون مذاکره در محیط کار",
     img: "./images/Courses/4.png",
-    description:
-      "در این دوره مهارت‌های لازم برای رسیدن به توافقات موفق و حرفه‌ای را کسب کنید.",
+    desc: "در این دوره مهارت‌های لازم برای رسیدن به توافقات موفق و حرفه‌ای را کسب کنید.",
     teacher: "مهرشاد حسینی",
     discount: 50,
     rate: 5.0,
@@ -81,8 +103,7 @@ export const CoursesData = [
     id: 7,
     title: "۱۲ فنون مذاکره در محیط کار",
     img: "./images/Courses/4.png",
-    description:
-      "در این دوره مهارت‌های لازم برای رسیدن به توافقات موفق و حرفه‌ای را کسب کنید.",
+    desc: "در این دوره مهارت‌های لازم برای رسیدن به توافقات موفق و حرفه‌ای را کسب کنید.",
     teacher: "مهرشاد حسینی",
     discount: 50,
     rate: 5.0,
@@ -92,10 +113,11 @@ export const CoursesData = [
   },
 ];
 
-export const BestCoursesData = [
+export const BestCoursesData: BestCoursesDataProps[] = [
   {
     id: 1,
     title: "رویکرد شناختی رفتاری در اتاق درمان",
+    desc: "",
     img: "./images/TopCourses/TopCourse0.png",
     date: "۱۴۰۳/۰۷/۱۷",
     enrolled: 154,
@@ -105,6 +127,7 @@ export const BestCoursesData = [
   {
     id: 2,
     title: "برنامه ریزی در پیشبرد اهداف",
+    desc: "",
     img: "./images/TopCourses/TopCourse1.png",
     date: "۱۴۰۳/۰۷/۱۷",
     enrolled: 144,
@@ -114,6 +137,7 @@ export const BestCoursesData = [
   {
     id: 3,
     title: "آموزش کوچینگ و توسعه فردی",
+    desc: "",
     img: "./images/TopCourses/TopCourse2.png",
     date: "۱۴۰۳/۰۷/۱۷",
     enrolled: 154,
@@ -121,8 +145,9 @@ export const BestCoursesData = [
     lastStudent: "مهرشاد رضایی",
   },
   {
-    id: 1,
+    id: 4,
     title: "رویکرد شناختی رفتاری در اتاق درمان",
+    desc: "",
     img: "./images/TopCourses/TopCourse0.png",
     date: "۱۴۰۳/۰۷/۱۷",
     enrolled: 154,
@@ -130,8 +155,9 @@ export const BestCoursesData = [
     lastStudent: "مهرشاد رضایی",
   },
   {
-    id: 2,
+    id: 5,
     title: "برنامه ریزی در پیشبرد اهداف",
+    desc: "",
     img: "./images/TopCourses/TopCourse1.png",
     date: "۱۴۰۳/۰۷/۱۷",
     enrolled: 144,
@@ -139,8 +165,9 @@ export const BestCoursesData = [
     lastStudent: "محسن آرش نیا",
   },
   {
-    id: 3,
+    id: 6,
     title: "آموزش کوچینگ و توسعه فردی",
+    desc: "",
     img: "./images/TopCourses/TopCourse2.png",
     date: "۱۴۰۳/۰۷/۱۷",
     enrolled: 154,
@@ -148,13 +175,13 @@ export const BestCoursesData = [
     lastStudent: "مهرشاد رضایی",
   },
 ];
-export const BlogPostsData = [
+export const BlogPostsData: BlogCardDataProps[] = [
   {
     id: 0,
     img: "./images/blogs/blog0.png",
     title: "تکنیک های روان درمانی",
     desc: "يكى از مسائل مهم و ضرورى براى مشاوران، آگاهى از فنون گوناگون مشاوره و يادگيرى آنها مى‏باشد. تنوع مشكلات و روحيات مراجعان به قدرى است",
-    author: "اکبر رضایی",
+    teacher: "اکبر رضایی",
     date: "۱۴۰۳/۰۸/۲۴",
   },
   {
@@ -162,7 +189,7 @@ export const BlogPostsData = [
     img: "./images/blogs/blog1.png",
     title: "مهارت های سخت مشاوره",
     desc: "اولین گام در کمک به مراجع یا مراجعان در جلسات مشاوره برقراری رابطه است . اما نوع رابطه ای که در جلسات مشاوره منظور است با روابط خارج از این جلسه متفاوت است . طبیعتاً جنس این رابطه از جنس رابطه یاورانه است",
-    author: "محمد حسینی",
+    teacher: "محمد حسینی",
     date: "۱۴۰۳/۰۴/۲۴",
   },
   {
@@ -170,7 +197,7 @@ export const BlogPostsData = [
     img: "./images/blogs/blog2.png",
     title: "تاثیر عادت ها بر سیناپس",
     desc: "در سال 2007، محققان دانشگاه آکسفورد شروع به بررسی مغز نوزادان کردند. چیزی که آنها یافتند، شگفت‌انگیز بود پس از مقایسهه مغز کودکان با",
-    author: "علی اکبری",
+    teacher: "علی اکبری",
     date: "۱۴۰۳/۰۵/۱۴",
   },
   {
@@ -178,31 +205,31 @@ export const BlogPostsData = [
     img: "./images/blogs/blog3.png",
     title: "مهارت های نرم مشاوره",
     desc: "برخی مشاوران مبتدی مشتاق هستند تا به مراجعان خود از طریق نصیحت کردن کمک کنند. آن ها راهنمایی مراجعان به مسیر درست و حل کردن مشکل آنان را مسئولیت خود می دانند. آن ها به خاطر تخصص در زمینهه رشد و رفتار انسان انتظار دارند",
-    author: "ارشیا زنجانی",
+    teacher: "ارشیا زنجانی",
     date: "۱۴۰۳/۰۸/۲۴",
   },
   {
-    id: 1,
+    id: 4,
     img: "./images/blogs/blog1.png",
     title: "مهارت های سخت مشاوره",
     desc: "اولین گام در کمک به مراجع یا مراجعان در جلسات مشاوره برقراری رابطه است . اما نوع رابطه ای که در جلسات مشاوره منظور است با روابط خارج از این جلسه متفاوت است . طبیعتاً جنس این رابطه از جنس رابطه یاورانه است",
-    author: "محمد حسینی",
+    teacher: "محمد حسینی",
     date: "۱۴۰۳/۰۴/۲۴",
   },
   {
-    id: 2,
+    id: 5,
     img: "./images/blogs/blog2.png",
     title: "تاثیر عادت ها بر سیناپس",
     desc: "در سال 2007، محققان دانشگاه آکسفورد شروع به بررسی مغز نوزادان کردند. چیزی که آنها یافتند، شگفت‌انگیز بود پس از مقایسهه مغز کودکان با",
-    author: "علی اکبری",
+    teacher: "علی اکبری",
     date: "۱۴۰۳/۰۵/۱۴",
   },
   {
-    id: 3,
+    id: 6,
     img: "./images/blogs/blog3.png",
     title: "مهارت های نرم مشاوره",
     desc: "برخی مشاوران مبتدی مشتاق هستند تا به مراجعان خود از طریق نصیحت کردن کمک کنند. آن ها راهنمایی مراجعان به مسیر درست و حل کردن مشکل آنان را مسئولیت خود می دانند. آن ها به خاطر تخصص در زمینهه رشد و رفتار انسان انتظار دارند",
-    author: "ارشیا زنجانی",
+    teacher: "ارشیا زنجانی",
     date: "۱۴۰۳/۰۸/۲۴",
   },
 ];
