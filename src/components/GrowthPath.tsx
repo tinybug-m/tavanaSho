@@ -1,23 +1,12 @@
-/**
- * Icons
- */
-import ElementSVG from "../assets/icons/element.svg";
+import React from "react";
+import { ElementIcon } from "../assets/icons";
 
-/**
- *
- * Images
- */
-import RoadMap from "../assets/roadmap.png";
 const GrowthPath = () => {
   return (
     <div className="lg:px-16 flex">
       <div className="w-6/12 flex flex-col relative">
         <div>
-          <img
-            src={ElementSVG}
-            className="absolute -top-5 -right-5 -z-10"
-            alt="backdrop"
-          />
+          <ElementIcon className="absolute -top-5 -right-5 -z-10" />
           <h2 className="font-bold font-size text-3xl">مسیر رشد</h2>
           <p className="font-light mb-8 text-2xl text-gray-600">
             در مسیر رشد شخصی هیچ‌کس تنها نیست
@@ -65,7 +54,7 @@ const GrowthPath = () => {
         </div>
       </div>
       <div className="w-6/12 flex justify-end">
-        <img src={RoadMap} alt="RoadMap Image" />
+        <img src="images/roadmap.png" alt="RoadMap Image" />
       </div>
     </div>
   );
