@@ -1,15 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import { ProfileIcon } from "../../assets/icons";
 import { MENU_ITEMS } from "../../utils/mockDatas";
 
 const DesktopMenu = () => {
+  const [openIndex, setOpenIndex] = useState<number | null>();
+
+  const handleToggle = (idx: number) => {
+    setOpenIndex((perv) => (perv === idx ? null : idx));
+  };
+
   return (
     <>
       <ul className="hidden lg:flex menu menu-horizontal text-base flex-1 pr-14">
         {MENU_ITEMS.map((item, idx) =>
           item.sub ? (
             <li key={idx}>
-              <details>
+              <details
+                open={idx == openIndex}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleToggle(idx);
+                }}
+              >
                 <summary>{item.title}</summary>
                 <ul className="bg-base-100 rounded-t-none p-2">
                   {item.sub.map((s, i) => (
@@ -53,7 +65,7 @@ const DesktopMenu = () => {
           </svg>
         </label>
 
-        <div className="w-12 h-12 flex justify-center items-center rounded-full bg-gray-950">
+        <div className="w-12 h-12 min-w-12 flex justify-center items-center rounded-full bg-gray-950">
           <ProfileIcon />
         </div>
       </div>

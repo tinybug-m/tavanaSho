@@ -10,7 +10,7 @@ const MainMenu = () => {
       <div className="max-w-screen-xl mx-auto px-4 lg:px-16 py-4 flex items-center justify-between">
         {/* Logo */}
         <a>
-          <img alt="Tavanasho logo" src="images/logo.png" className="h-10" />
+          <img alt="Tavanasho logo" src="images/logo.png" />
         </a>
 
         <DesktopMenu />
