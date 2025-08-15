@@ -2,24 +2,36 @@ import React from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import type SwiperType from "swiper";
+import type { SwiperOptions } from "swiper/types";
+
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import { Navigation } from "swiper/modules";
-import { Children, cloneElement, useRef } from "react";
+import { useRef } from "react";
 import { Pagination } from "swiper/modules";
 
 import { LeftIcon, RightIcon, ElementIcon } from "../assets/icons";
+import { defaultCardType } from "../utils/mockDatas";
+
+type MainCarouselProps = {
+  cardsData: defaultCardType[];
+  title: string;
+  desc: string;
+  navigateType?: "buttons" | null;
+  breakPoints: SwiperOptions["breakpoints"];
+  renderItem: (props) => React.ReactNode;
+};
 
 const MainCarousel = ({
   cardsData,
   title,
   desc,
   navigateType,
-  slidesPerView,
-  children,
-}) => {
+  breakPoints,
+  renderItem,
+}: MainCarouselProps) => {
   const swiperRef = useRef<SwiperType | null>(null);
 
   return (
@@ -57,21 +69,7 @@ const MainCarousel = ({
           paddingBottom: navigateType !== "buttons" ? "40px" : "0",
           padding: "50px 0",
         }}
-        // slidesPerView={slidesPerView}
-        breakpoints={{
-          320: {
-            slidesPerView: 1.25,
-          },
-          640: {
-            slidesPerView: 2,
-          },
-          1024: {
-            slidesPerView: slidesPerView,
-          },
-          // 1440: {
-          //   slidesPerView: 4,
-          // },
-        }}
+        breakpoints={breakPoints}
         spaceBetween={20}
         loop={true}
         onSwiper={(swiper) => (swiperRef.current = swiper)}
@@ -80,9 +78,7 @@ const MainCarousel = ({
         }}
       >
         {cardsData.map((props) => (
-          <SwiperSlide key={props.id}>
-            {Children.map(children, (child) => cloneElement(child, { props }))}
-          </SwiperSlide>
+          <SwiperSlide key={props.id}>{renderItem(props)}</SwiperSlide>
         ))}
       </Swiper>
     </div>

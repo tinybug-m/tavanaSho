@@ -1,4 +1,4 @@
-type defaultCardType = {
+export type defaultCardType = {
   id: number;
   title: string;
   img: string;

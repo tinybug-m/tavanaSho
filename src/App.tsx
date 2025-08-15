@@ -1,18 +1,22 @@
-/**
- * Components
- */
+import React from "react";
+
 import MainCarousel from "./components/MainCarousel";
 import GrowthPath from "./components/GrowthPath";
 import MainHero from "./components/MainHero";
 import MainMenu from "./components/MainMenu";
-
 import CourseCard from "./components/Courses/CourseCard";
 import TopCoursesCard from "./components/Courses/TopCoursesCard";
 import Customers from "./components/Customers";
 import BlogCard from "./components/Courses/BlogCard";
 import AboutUs from "./components/AboutUs";
 import Footer from "./components/Footer";
-import { BestCoursesData, BlogPostsData, CoursesData } from "./utils/mockDatas";
+
+import {
+  BestCoursesData,
+  BlogPostsData,
+  CoursesCardDataProps,
+  CoursesData,
+} from "./utils/mockDatas";
 
 function App() {
   return (
@@ -27,10 +31,13 @@ function App() {
           title="جدیدترین دوره ها"
           desc="سکوی پرتاپ شما به سمت موفقیت"
           navigateType="buttons"
-          slidesPerView={4}
-        >
-          <CourseCard />
-        </MainCarousel>
+          breakPoints={{
+            320: { slidesPerView: 1 },
+            640: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+          renderItem={(props) => <CourseCard props={props} />}
+        />
 
         <GrowthPath />
 
@@ -39,10 +46,13 @@ function App() {
           title="محبوب ترین دوره ها"
           desc="یادگیری و رشد توسعه فردی"
           navigateType="buttons"
-          slidesPerView={3}
-        >
-          <TopCoursesCard />
-        </MainCarousel>
+          breakPoints={{
+            320: { slidesPerView: 1 },
+            640: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+          renderItem={(props) => <TopCoursesCard props={props} />}
+        />
 
         <Customers />
 
@@ -50,10 +60,13 @@ function App() {
           cardsData={BlogPostsData}
           title="جدیدترین دوره ها"
           desc="سکوی پرتاپ شما به سمت موفقیت"
-          slidesPerView={4}
-        >
-          <BlogCard />
-        </MainCarousel>
+          breakPoints={{
+            320: { slidesPerView: 1 },
+            640: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+          renderItem={(props) => <BlogCard props={props} />}
+        />
 
         <AboutUs />
       </div>
