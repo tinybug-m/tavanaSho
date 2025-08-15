@@ -1,6 +1,5 @@
-import React from "react";
 
-const IconTextCard = ({ icon = "Users.svg", text }) => {
+const IconTextCard = ({ icon = "Users.svg", text }: {icon: string;text:string}) => {
   return (
     <div className="flex flex-col items-center relative">
       <img

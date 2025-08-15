@@ -1,4 +1,3 @@
-import React from "react";
 import { EducationIcon } from "../../assets/icons";
 
 const HeroGIgili = ({ top = 2, right = 1 }) => {

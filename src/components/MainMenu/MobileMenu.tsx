@@ -1,4 +1,3 @@
-import React from "react";
 import { ProfileIcon } from "../../assets/icons";
 import { MENU_ITEMS } from "../../utils/mockDatas";
 

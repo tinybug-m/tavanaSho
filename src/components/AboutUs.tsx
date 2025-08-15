@@ -1,4 +1,3 @@
-import React from "react";
 
 // import Artboard0 from "../assets/Logos/Artboard0.svg";
 // import Artboard1 from "../assets/Logos/Artboard1.svg";

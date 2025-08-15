@@ -1,7 +1,6 @@
-import Card from "./Card";
 import { EnrolledIcon, Left2Icon } from "../../assets/icons";
-import React from "react";
 import { BlogCardDataProps } from "../../utils/mockDatas";
+import Card from "./Card";
 
 const BlogCard = ({ props }: { props: BlogCardDataProps }) => {
   const { img, title, desc, teacher, date } = props;

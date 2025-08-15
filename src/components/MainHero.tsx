@@ -1,4 +1,3 @@
-import React from "react";
 
 import HeroGIgili from "./Widgets/HeroGIgili";
 import { ForeignIcon, PlayOctagonIcon } from "../assets/icons";

@@ -1,8 +1,6 @@
-import React from "react";
-
-import { useState } from "react";
-import { QucationIcon, StarIcon } from "../assets/icons";
-import { CUSTOMERS_MOCK_DATA } from "../utils/mockDatas";
+import { useState } from 'react';
+import { QucationIcon, StarIcon } from '../assets/icons';
+import { CustomerProps, CUSTOMERS_MOCK_DATA } from '../utils/mockDatas';
 
 const Customers = () => {
   const [customers, setCustomers] = useState(CUSTOMERS_MOCK_DATA);
@@ -24,9 +22,7 @@ const Customers = () => {
                 className="transition-all hover:-translate-y-4 cursor-pointer h-auto"
                 onClick={() => handleSortCustomers(index)}
                 style={{
-                  transform: `rotate(${index * 5}deg) translateX(${
-                    index * 20
-                  }px)`,
+                  transform: `rotate(${index * 5}deg) translateX(${index * 20}px)`,
                 }}
                 alt="Customer 0 Image"
               />
@@ -39,7 +35,7 @@ const Customers = () => {
         <p className="text-3xl">{customers[0].message}</p>
         <div className="flex justify-between">
           <div className="flex">
-            {[...Array(customers[0].score)].map((_, index) => (
+            {[...Array<CustomerProps>(customers[0].score)].map((_, index) => (
               <StarIcon key={index} className="w-8" />
             ))}
           </div>

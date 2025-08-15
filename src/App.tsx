@@ -1,22 +1,22 @@
-import React from "react";
-
-import MainCarousel from "./components/MainCarousel";
-import GrowthPath from "./components/GrowthPath";
-import MainHero from "./components/MainHero";
-import MainMenu from "./components/MainMenu";
-import CourseCard from "./components/Courses/CourseCard";
-import TopCoursesCard from "./components/Courses/TopCoursesCard";
-import Customers from "./components/Customers";
-import BlogCard from "./components/Courses/BlogCard";
-import AboutUs from "./components/AboutUs";
-import Footer from "./components/Footer";
+import MainCarousel from './components/MainCarousel';
+import GrowthPath from './components/GrowthPath';
+import MainHero from './components/MainHero';
+import MainMenu from './components/MainMenu';
+import CourseCard from './components/Courses/CourseCard';
+import TopCoursesCard from './components/Courses/TopCoursesCard';
+import Customers from './components/Customers';
+import BlogCard from './components/Courses/BlogCard';
+import AboutUs from './components/AboutUs';
+import Footer from './components/Footer';
 
 import {
   BestCoursesData,
+  BestCoursesDataProps,
+  BlogCardDataProps,
   BlogPostsData,
   CoursesCardDataProps,
   CoursesData,
-} from "./utils/mockDatas";
+} from './utils/mockDatas';
 
 function App() {
   return (
@@ -36,7 +36,7 @@ function App() {
             640: { slidesPerView: 2 },
             1024: { slidesPerView: 4 },
           }}
-          renderItem={(props) => <CourseCard props={props} />}
+          renderItem={(props: CoursesCardDataProps) => <CourseCard props={props} />}
         />
 
         <GrowthPath />
@@ -51,7 +51,7 @@ function App() {
             640: { slidesPerView: 2 },
             1024: { slidesPerView: 3 },
           }}
-          renderItem={(props) => <TopCoursesCard props={props} />}
+          renderItem={(props: BestCoursesDataProps) => <TopCoursesCard props={props} />}
         />
 
         <Customers />
@@ -65,7 +65,7 @@ function App() {
             640: { slidesPerView: 2 },
             1024: { slidesPerView: 4 },
           }}
-          renderItem={(props) => <BlogCard props={props} />}
+          renderItem={(props: BlogCardDataProps) => <BlogCard props={props} />}
         />
 
         <AboutUs />

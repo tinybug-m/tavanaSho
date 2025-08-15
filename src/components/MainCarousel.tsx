@@ -13,25 +13,24 @@ import { useRef } from "react";
 import { Pagination } from "swiper/modules";
 
 import { LeftIcon, RightIcon, ElementIcon } from "../assets/icons";
-import { defaultCardType } from "../utils/mockDatas";
 
-type MainCarouselProps = {
-  cardsData: defaultCardType[];
+interface MainCarouselProps<T extends { id: number }> {
+  cardsData: T[];
   title: string;
   desc: string;
   navigateType?: "buttons" | null;
   breakPoints: SwiperOptions["breakpoints"];
-  renderItem: (props) => React.ReactNode;
-};
+  renderItem: (_props: T) => React.ReactNode;
+}
 
-const MainCarousel = ({
+const MainCarousel = <T extends { id: number },>({
   cardsData,
   title,
   desc,
   navigateType,
   breakPoints,
   renderItem,
-}: MainCarouselProps) => {
+}: MainCarouselProps<T>) => {
   const swiperRef = useRef<SwiperType | null>(null);
 
   return (

@@ -1,12 +1,12 @@
 import React from "react";
 import { ReactNode } from "react";
 
-type CardProps = {
+interface CardProps {
   rounded?: boolean;
   bgColor?: string;
   shadow?: boolean;
   children: ReactNode;
-};
+}
 
 const Card = ({ rounded, bgColor, shadow, children }: CardProps) => {
   return (
