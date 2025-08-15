@@ -24,7 +24,7 @@ const MainCarousel = ({
 
   return (
     <div className="">
-      <div className="flex justify-between mb-8">
+      <div className="flex flex-col gap-2 md:flex-row md:gap-0 justify-between md:mb-8">
         <div className="flex flex-col relative gap-2">
           <ElementIcon className="absolute -top-3 -right-5 -z-10" />
           <h2 className="font-bold text-4xl">{title}</h2>
@@ -33,7 +33,7 @@ const MainCarousel = ({
 
         {/* Custom Navigation Buttons */}
         {navigateType == "buttons" && (
-          <div className="flex gap-4">
+          <div className="gap-4 hidden md:flex">
             <button
               className="btn rounded-full w-14 h-14 bg-gray-950 !p-1"
               onClick={() => swiperRef.current?.slidePrev()} // Move to previous slide
