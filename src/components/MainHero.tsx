@@ -7,8 +7,8 @@ const MainHero = () => {
   return (
     <div className="hero">
       <div className="hero-content flex-col lg:flex-row lg:flex justify-between">
-        <div className="lg:w-4/12 w-full mt-4 lg:mt-0">
-          <h1 className="text-5xl font-bold relative heigh leading-normal">
+        <div className="lg:w-4/12 w-full md:mt-4 lg:mt-0">
+          <h1 className="text-5xl font-bold relative leading-normal">
             <div className="absolute w-60 h-60 bg-[#FBD4C090] -top-24 -right-24 rounded-full blur-3xl -z-10"></div>
             راهی به سوی بهترین نسخه از
             <span className="text-primary">خودت!</span>

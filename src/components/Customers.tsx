@@ -14,7 +14,7 @@ const Customers = () => {
 
   return (
     <div className="flex flex-wrap justify-between">
-      <div className="md:w-5/12 w-full flex justify-center">
+      <div className="px-8 md:px-0 md:w-5/12 w-full flex justify-center">
         <div className="stack">
           {customers.map((customer, index) => {
             return (

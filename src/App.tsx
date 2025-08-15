@@ -21,7 +21,7 @@ import {
 function App() {
   return (
     <>
-      <div className="max-w-screen-xl px-2 md:px-0 overflow-hidden mx-auto bg-#fafafa flex flex-col gap-16 md:gap-32 pb-24 pt-20 md:pt-40">
+      <div className="max-w-screen-xl px-2 md:px-0 overflow-hidden md:overflow-visible mx-auto bg-#fafafa flex flex-col gap-16 md:gap-32 pb-24 pt-20 md:pt-40">
         <MainMenu />
 
         <MainHero />
@@ -34,7 +34,7 @@ function App() {
           breakPoints={{
             320: { slidesPerView: 1 },
             640: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
+            1024: { slidesPerView: 4 },
           }}
           renderItem={(props) => <CourseCard props={props} />}
         />
@@ -63,7 +63,7 @@ function App() {
           breakPoints={{
             320: { slidesPerView: 1 },
             640: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
+            1024: { slidesPerView: 4 },
           }}
           renderItem={(props) => <BlogCard props={props} />}
         />
