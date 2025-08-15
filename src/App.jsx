@@ -17,7 +17,7 @@ import { BestCoursesData, BlogPostsData, CoursesData } from "./utils/mockDatas";
 function App() {
   return (
     <>
-      <div className="max-w-screen-xl mx-auto bg-#fafafa flex flex-col gap-32 pb-24 pt-40">
+      <div className="max-w-screen-xl px-2 md:px-0 overflow-hidden mx-auto bg-#fafafa flex flex-col gap-16 md:gap-32 pb-24 pt-20 md:pt-40">
         <MainMenu />
 
         <MainHero />
