@@ -3,8 +3,8 @@ import { ElementIcon } from "../assets/icons";
 
 const GrowthPath = () => {
   return (
-    <div className="lg:px-16 flex">
-      <div className="w-6/12 flex flex-col relative">
+    <div className="flex lg:px-16 flex-col gap-4 md:flex-row md:gap-0 ">
+      <div className="w-full md:w-6/12 flex flex-col relative">
         <div>
           <ElementIcon className="absolute -top-5 -right-5 -z-10" />
           <h2 className="font-bold font-size text-3xl">مسیر رشد</h2>
@@ -53,7 +53,7 @@ const GrowthPath = () => {
           </div>
         </div>
       </div>
-      <div className="w-6/12 flex justify-end">
+      <div className="w-full md:w-6/12 flex justify-end">
         <img src="images/roadmap.png" alt="RoadMap Image" />
       </div>
     </div>

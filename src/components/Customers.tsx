@@ -13,9 +13,9 @@ const Customers = () => {
   };
 
   return (
-    <div className=" flex justify-between">
-      <div className="w-5/12 flex">
-        <div className="stack stack-start">
+    <div className="flex flex-wrap justify-between">
+      <div className="md:w-5/12 w-full flex justify-center">
+        <div className="stack">
           {customers.map((customer, index) => {
             return (
               <img
@@ -34,7 +34,7 @@ const Customers = () => {
           })}
         </div>
       </div>
-      <div className="w-7/12 flex flex-col relative gap-6">
+      <div className="md:w-7/12 w-full flex flex-col relative gap-6">
         <QucationIcon />
         <p className="text-3xl">{customers[0].message}</p>
         <div className="flex justify-between">

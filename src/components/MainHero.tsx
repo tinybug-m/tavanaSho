@@ -17,7 +17,7 @@ const MainHero = () => {
             با دوره ها و ابزار های توانا شو به رشد شخصی خودت سرعت بده و به
             بهترین نسخه خودت تبدیل شو.
           </p>
-          <div className="flex gap-4">
+          <div className="flex flex-col md:flex-row gap-4">
             <button className="btn btn-lg h-auto px-5 py-3.5 border-0 bg-primary text-white rounded-3xl font-bold gap-2.5 ">
               <ForeignIcon />
               ازینجا شروع کن

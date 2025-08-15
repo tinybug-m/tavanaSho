@@ -17,7 +17,7 @@ const Footer = () => {
           className="absolute -top-10 -right-2"
         />
 
-        <div className="flex gap-16 justify-center">
+        <div className="flex flex-col md:flex-row gap-16 justify-center">
           {APP_PAGES.map((page, index) => (
             <a href="#" key={index} className="text-xl">
               {page}
@@ -25,7 +25,7 @@ const Footer = () => {
           ))}
         </div>
         <div className="divider"></div>
-        <div className="flex justify-between items-center">
+        <div className="flex flex-col md:flex-row justify-between items-center">
           <p>
             کلیه حقوق مادی و معنوی سایت محفوظ است و هر گونه کپی برداری شامل
             پیگرد قانونی است

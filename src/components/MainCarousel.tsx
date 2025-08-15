@@ -57,7 +57,21 @@ const MainCarousel = ({
           paddingBottom: navigateType !== "buttons" ? "40px" : "0",
           padding: "50px 0",
         }}
-        slidesPerView={slidesPerView}
+        // slidesPerView={slidesPerView}
+        breakpoints={{
+          320: {
+            slidesPerView: 1.25,
+          },
+          640: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: slidesPerView,
+          },
+          // 1440: {
+          //   slidesPerView: 4,
+          // },
+        }}
         spaceBetween={20}
         loop={true}
         onSwiper={(swiper) => (swiperRef.current = swiper)}
