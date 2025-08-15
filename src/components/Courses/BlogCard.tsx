@@ -15,7 +15,7 @@ const BlogCard = ({ props }: { props: BlogCardDataProps }) => {
 
       <div className="flex justify-between">
         <span className="flex items-center gap-1 text-sm text-gray-600">
-          <EnrolledIcon />
+          <EnrolledIcon className="w-5 h-5" />
           {teacher}
         </span>
         <p>{date}</p>
