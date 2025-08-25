@@ -1,6 +1,7 @@
 import { useState } from "react";
 import DesktopMenu from "./DesktopMenu";
 import MobileMenu from "./MobileMenu";
+import Hamburger from "./Hamburger"
 
 const MainMenu = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -16,13 +17,10 @@ const MainMenu = () => {
         <DesktopMenu />
 
         {/* Mobile Menu Button */}
-        <button
-          className="lg:hidden p-2 rounded-md hover:bg-gray-100"
-          onClick={() => setMobileOpen(!mobileOpen)}
-        >
-          {/* {mobileOpen ? <HiOutlineX size={28} /> : <HiOutlineMenu size={28} />} */}
-          {mobileOpen ? "open" : "close"}
-        </button>
+        <Hamburger
+          open={mobileOpen}
+          onToggle={() => setMobileOpen(!mobileOpen)}
+        />
       </div>
 
       {/* Mobile Menu Dropdown */}
