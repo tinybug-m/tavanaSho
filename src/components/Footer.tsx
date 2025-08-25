@@ -8,7 +8,7 @@ import { APP_PAGES } from "../utils/mockDatas";
 
 const Footer = () => {
   return (
-    <div className="bg-[#FFEFEB] ">
+    <div className="bg-[#FFEFEB] p-2">
       <div className="max-w-screen-xl flex flex-col m-auto gap-8  pt-14 pb-9 relative">
         <img
           alt="Tavanasho logo"
@@ -16,7 +16,7 @@ const Footer = () => {
           className="absolute -top-10 -right-2"
         />
 
-        <div className="flex flex-col md:flex-row gap-16 justify-center">
+        <div className="flex flex-wrap md:flex-row gap-16 justify-center">
           {APP_PAGES.map((page, index) => (
             <a href="#" key={index} className="text-xl">
               {page}
@@ -24,7 +24,7 @@ const Footer = () => {
           ))}
         </div>
         <div className="divider"></div>
-        <div className="flex flex-col md:flex-row justify-between items-center">
+        <div className="flex flex-col gap-2 md:flex-row justify-between items-center">
           <p>
             کلیه حقوق مادی و معنوی سایت محفوظ است و هر گونه کپی برداری شامل
             پیگرد قانونی است
